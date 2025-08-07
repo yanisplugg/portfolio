@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Шапка профиля -->
+        <header class="profile-header">
+            <div class="profile-photo">
+                <img src="https://raw.githubusercontent.com/yanisplugg/MDK/refs/heads/main/photo_2025-08-07_01-59-22.jpg" alt="Фото профиля">
+            </div>
+            <div class="profile-info">
+                <h1>Десятский Ян Дмитриевич</h1>
+                <h2>Начинающий IT-специалист</h2>
+            </div>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Левая колонка -->
+            <aside class="sidebar">
+                <!-- Контактная информация -->
+                <section class="contact-section">
+                    <h3><i class="fas fa-address-book"></i> Контакты</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (911) 112-46-06</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ian.desiatskii@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Санкт-Петербург, Россия</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/yanisplugg</span>
+                    </div>
+                </section>
+
+                <!-- Персональная информация -->
+                <section class="personal-info">
+                    <h3><i class="fas fa-user"></i> Личная информация</h3>
+                    <div class="info-item">
+                        <strong>Возраст:</strong> 17 лет
+                    </div>
+                    <div class="info-item">
+                        <strong>Дата рождения:</strong> 25.12.2007
+                    </div>
+                    <div class="info-item">
+                        <strong>Гражданство:</strong> РФ
+                    </div>
+                </section>
+
+                <!-- Навыки -->
+                <section class="skills-section">
+                    <h3><i class="fas fa-code"></i> Технические навыки</h3>
+                    
+                    <div class="skill-item">
+                        <span class="skill-name">HTML/CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="55"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <span class="skill-name">Go</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="32"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <span class="skill-name">C++</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="28"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-skill="15"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Языки -->
+                <section class="languages-section">
+                    <h3><i class="fas fa-globe"></i> Языки</h3>
+                    <div class="language-item">
+                        <span>Русский</span>
+                        <span class="level">Родной</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Английский</span>
+                        <span class="level">B1</span>
+                    </div>
+                    <div class="language-item">
+                        <span>Французский</span>
+                        <span class="level">B1</span>
+                    </div>
+                </section>
+
+                <!-- Образование -->
+                <section class="education-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Образование</h3>
+                    
+                    <div class="education-item">
+                        <div class="edu-header">
+                            <h4>Специалист в области информационных технологий</h4>
+                            <span class="period">2023 - 2027</span>
+                        </div>
+                        <div class="institution">ИСПО</div>
+                        <p>Специальность - "Информационные системы и программирование"</p>
+                    </div>
+                </section>
+
+            </aside>
+
+            <!-- Правая колонка -->
+            <div class="content">
+                <!-- О себе -->
+                <section class="about-section">
+                    <h3><i class="fas fa-user-circle"></i> О себе</h3>
+                    <p>Студент 3 курса ИСПО. Изучаю C++, GO, HTML/CSS, JavaScript, также знакомлюсь с Linux, есть базовое понимание SQL. Продолжаю развивать навыки программирования, стремлюсь к написанию качественного кода и развитию в сфере IT.</p>
+                </section>
+
+                <!-- Опыт работы -->
+                <section class="experience-section">
+                    <h3><i class="fas fa-briefcase"></i> Опыт работы</h3>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h4>Начинающий IT-специалист</h4>
+                        </div>
+                        <div class="company">Самостоятельное изучение и практика</div>
+                        <ul>
+                            <li>Определился с карьерным путем после глубокого анализа IT-сферы</li>
+                            <li>Активно изучаю современные технологии: C++, GO, HTML/CSS</li>
+                            <li>Создаю pet-проекты для отработки навыков и пополнения портфолио</li>
+                            <li>Готов к интенсивному обучению и быстрому профессиональному росту</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h4>Мотивация и цели</h4>
+                        </div>
+                        <div class="company">Личностное развитие</div>
+                        <ul>
+                            <li>Готов вкладывать время и усилия в изучение новых технологий</li>
+                            <li>Хочу создавать продукты, которые решают реальные проблемы пользователей</li>
+                            <li>Планирую развиваться как backend разработчик в перспективе</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h4>Практический опыт</h4>
+                        </div>
+                        <div class="company">Самостоятельные проекты</div>
+                        <ul>
+                            <li>Создал программное обеспечение для управления медиа-контентом</li>
+                            <li>Разработал интерактивные веб-приложения на HTML/CSS/JavaScript</li>
+                            <li>Изучил основы работы с API</li>
+                            <li>Освоил Git, работу с командной строкой и современные инструменты разработки</li>
+                            <li>Изучил процесс настройки окружения для проектов на Go под Linux</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Проекты -->
+            </div>
+            
+            <!-- Проекты в отдельной колонке -->
+            <div class="projects-column">
+                <!-- Курсы и сертификаты -->
+                <section class="courses-section">
+                    <h3><i class="fas fa-certificate"></i> Курсы и сертификаты</h3>
+                    
+                    <div class="course-item">
+                        <div class="course-header">
+                            <h4>Go: шаг за шагом</h4>
+                        </div>
+                        <div class="provider">Яндекс Лицей</div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-header">
+                            <h4>Программирование на Golang</h4>
+                        </div>
+                        <div class="provider">Stepik</div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-header">
+                            <h4>Добрый, добрый C/C++ с Сергеем Балакиревым</h4>
+                        </div>
+                        <div class="provider">Stepik</div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-header">
+                            <h4>A tour of Go</h4>
+                        </div>
+                        <div class="provider">Go</div>
+                    </div>
+                </section>
+
+                <!-- Личные достижения -->
+                <section class="achievements-section">
+                    <h3><i class="fas fa-trophy"></i> Личные достижения</h3>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-header">
+                            <h4>Олимпиада по ОАП (Основы Алгоритмизации Программирования)</h4>
+                            <div class="medal medal-bronze" data-place="3">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                        </div>
+                        <div class="achievement-details">
+                            <span class="competition">Среди студентов 2-го курса ИСПО</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-header">
+                            <h4>Олимпиада по ОПБД (Основы Проектирования Баз данных)</h4>
+                            <div class="medal medal-silver" data-place="2">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                        </div>
+                        <div class="achievement-details">
+                            <span class="competition">Среди студентов 2-3 курсов ИСПО</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <div class="achievement-header">
+                            <h4>Олимпиада по ЭВМ (Элементы Высшей Математики)</h4>
+                            <div class="medal medal-bronze" data-place="3">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                        </div>
+                        <div class="achievement-details">
+                            <span class="competition">Среди студентов 2-го курса ИСПО</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-header">
+                            <h4>Олимпиада по ДМ (Дискретная Математика)</h4>
+                            <div class="medal medal-gold" data-place="1">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                        </div>
+                        <div class="achievement-details">
+                            <span class="competition">Среди студентов 2-го курса ИСПО</span>
+                            <span class="year">2025</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="projects-section">
+                    <h3><i class="fas fa-folder-open"></i> Проекты</h3>
+                    
+                    <div class="project-item" data-github="https://github.com/yanisplugg/Pult">
+                        <h4>Пульт для управления медиа-контентом <i class="fab fa-github"></i></h4>
+                        <p>Интерактивный пульт для управления воспроизведением медиа-контента, представленный в нескольких версиях (для разных дистрибутивов, в том числе отечественных (RedOS))</p>
+                        <div class="tech-stack">
+                            <span class="tech">Go</span>
+                            <span class="tech">Linux</span>
+                            <span class="tech">HTML/CSS</span>
+                            <span class="tech">JavaScript</span>
+                        </div>
+                    </div>
+                                                                               
+                    <div class="project-item" data-github="https://github.com/yanisplugg/portfolio">
+                        <h4>Портфолио сайт <i class="fab fa-github"></i></h4>
+                        <p>Адаптивный сайт-портфолио с современным дизайном, анимациями и темной темой. Создан для демонстрации навыков верстки.</p>
+                        <div class="tech-stack">
+                            <span class="tech">HTML</span>
+                            <span class="tech">CSS</span>
+                            <span class="tech">JavaScript</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Футер с кнопками действий -->
+        <footer class="actions-footer">
+            <button class="btn btn-primary" onclick="downloadPDF()">
+                <i class="fas fa-download"></i> Скачать PDF
+            </button>
+            <button class="btn btn-secondary" onclick="printResume()">
+                <i class="fas fa-print"></i> Печать
+            </button>
+            <button class="btn btn-accent" onclick="contactMe()">
+                <i class="fas fa-envelope"></i> Связаться
+            </button>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
